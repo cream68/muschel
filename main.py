@@ -149,7 +149,7 @@ input_df = pd.DataFrame(coordinate_list, columns=['x', 'y'])
 if not input_df.empty:
     input_x_normalized = (input_df['x'].values - x_min) / (x_max - x_min)
     input_y_normalized = (input_df['y'].values - y_min) / (y_max - y_min)
-
+    input_z = griddata((x_nurbs_normalized, y_nurbs_normalized), z_nurbs, (input_x_normalized, input_y_normalized), method='cubic')
     input_df['z'] = input_z
 
     # Display the table underneath the input box
