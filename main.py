@@ -232,7 +232,7 @@ fig.update_layout(
     title="Nurbs und Kontur Diagramm",
     xaxis=dict(title='X'),
     yaxis=dict(title='Y'),
-    legend=dict(x=0, y=-0.2, traceorder='normal', orientation='h'),
+    legend=dict(traceorder='normal', orientation='h'),
     autosize=False,
     width=800,
     height=600,
