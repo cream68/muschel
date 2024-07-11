@@ -222,7 +222,7 @@ if not input_df.empty:
         y=input_df['y'],
         mode='markers',
         marker=dict(color='red', size=10),
-        name="Input Coordinates",
+        name="Input",
         text=input_df['hover_text'], 
         hoverinfo='text',    # Show hover information as text
     ))
