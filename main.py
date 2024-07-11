@@ -52,10 +52,17 @@ def fit_smooth_nurbs_curve(x_curve, y_curve, degree=3, sample_size=100):
 df1 = pd.read_csv('Data.csv', sep=';')
 df2 = pd.read_csv('76er_Default Dataset-12.csv', sep=';')
 df3 = pd.read_csv('88,5er_Default Dataset-12.csv', sep=';')
+df4 = pd.read_csv('Data087.csv', sep=';')
 
 df1.columns = ['x', 'y', 'z']
 df2.columns = ['x', 'y']
 df3.columns = ['x', 'y']
+df4.columns = ['x', 'y', 'z']
+# Filter out z-values 0.885 and 0.76
+z = df1['z'].values
+mask =~np.isclose(z, 0.885) & ~np.isclose(z, 0.76) & ~np.isclose(z, 0.87)
+df1 = df1[mask]
+
 
 # Add a constant value column to df2
 df2['z'] = 0.76
@@ -64,7 +71,7 @@ df2['z'] = 0.76
 df3['z'] = 0.885
 
 # Concatenate the DataFrames
-df_combined = pd.concat([df1, df2, df3])
+df_combined = pd.concat([df1, df2, df3,df4])
 
 # Extract x, y, and z values from the dataframe
 x = df_combined['x'].values
