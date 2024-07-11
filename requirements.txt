@@ -1,7 +1,6 @@
 altair==5.3.0
 attrs==23.2.0
 blinker==1.8.2
-bokeh==2.4.3
 cachetools==5.3.3
 certifi==2024.7.4
 charset-normalizer==3.3.2
@@ -24,8 +23,6 @@ markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 matplotlib==3.9.1
 mdurl==0.1.2
-mplcursors==0.5.3
-mpld3==0.5.10
 numpy==2.0.0
 packaging==24.1
 pandas==2.2.2
@@ -50,8 +47,6 @@ setuptools==70.3.0
 six==1.16.0
 smmap==5.0.1
 streamlit==1.36.0
-streamlit-bokeh-events==0.1.2
-streamlit-bokeh3-events==0.1.4
 tenacity==8.5.0
 threadpoolctl==3.5.0
 toml==0.10.2
