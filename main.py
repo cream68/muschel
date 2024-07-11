@@ -139,7 +139,7 @@ st.title('Muscheldiagramm')
 
 # User input for coordinates
 st.sidebar.header('Input')
-coordinate_input = st.sidebar.text_area("Enter x, y coordinates (comma-separated, one pair per line)", "30, 800\n25, 400")
+coordinate_input = st.sidebar.text_area("Enter x, y coordinates (comma-separated, one pair per line)", "25, 600\n26, 600\n27,600\n21,575")
 coordinate_list = [tuple(map(float, line.split(','))) for line in coordinate_input.split('\n') if line]
 
 # Convert coordinates to DataFrame for display and interpolation
@@ -149,7 +149,7 @@ input_df = pd.DataFrame(coordinate_list, columns=['x', 'y'])
 if not input_df.empty:
     input_x_normalized = (input_df['x'].values - x_min) / (x_max - x_min)
     input_y_normalized = (input_df['y'].values - y_min) / (y_max - y_min)
-    input_z = griddata((x_nurbs_normalized, y_nurbs_normalized), z_nurbs, (input_x_normalized, input_y_normalized), method='cubic')
+
     input_df['z'] = input_z
 
     # Display the table underneath the input box
