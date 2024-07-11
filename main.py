@@ -139,7 +139,7 @@ st.title('Muscheldiagramm')
 
 # User input for coordinates
 st.sidebar.header('Input')
-coordinate_input = st.sidebar.text_area("Enter x, y coordinates (comma-separated, one pair per line)", "0.5, 0.5\n0.6, 0.6")
+coordinate_input = st.sidebar.text_area("Enter x, y coordinates (comma-separated, one pair per line)", "30, 800\n25, 400")
 coordinate_list = [tuple(map(float, line.split(','))) for line in coordinate_input.split('\n') if line]
 
 # Convert coordinates to DataFrame for display and interpolation
