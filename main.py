@@ -108,7 +108,7 @@ for z_value in unique_z:
     smooth_nurbs_points = fit_smooth_nurbs_curve(x_curve, y_curve, degree=5, sample_size=500)
     
     # Generate points with fixed spacing along the smooth curve
-    fixed_spacing_points = generate_points_with_fixed_spacing(smooth_nurbs_points[:, 0], smooth_nurbs_points[:, 1], spacing=0.05)
+    fixed_spacing_points = generate_points_with_fixed_spacing(smooth_nurbs_points[:, 0], smooth_nurbs_points[:, 1], spacing=0.04)
     
     # Collect points with the corresponding z-value
     for pt in fixed_spacing_points:
